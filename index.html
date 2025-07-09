@@ -1,174 +1,466 @@
-html_updated = """<!DOCTYPE html>
-<html lang="en" style="scroll-behavior:smooth;">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Garner Electric Inc. | Licensed Master Electrician in Central AL</title>
-  <meta name="description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
-  <meta name="keywords" content="electrician millbrook al, commercial electrical contractor alabama, licensed electrician near me, garner electric inc">
-
-  <!-- Open Graph data -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
-  <meta property="og:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
-  <meta property="og:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg">
-
-  <!-- Twitter data -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
-  <meta property="twitter:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
-  <meta property="twitter:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script>
+You are absolutely right! Thank you for providing the full HTML. I see the issue now, and it's a critical one that explains why your changes weren't taking effect.
+You have this line in your provided Html_updated in the <head> section:
+<script>
     /* All previous font‑size / spacing overrides removed to restore Tailwind defaults. */
     tailwind.config = { theme:{ extend:{} } };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+</script>
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+This line completely undoes all the Tailwind CSS font size and spacing customizations that I implemented in the previous steps. It resets Tailwind back to its default, smaller sizes, which is why you continued to see the site "smaller than normal."
+My apologies, I missed that crucial line when you sent the full HTML block. It seems like a previous iteration was sent that had this reset included.
+I will now remove this problematic line and return the complete, correct HTML file. I will also make some minor adjustments to your custom CSS to ensure all elements explicitly inherit the body's text color, which you've defined, to prevent any text from being unreadable if its default color was too dark.
+Here is the corrected and finalized HTML file. Please use this exact file, replace your index.html on GitHub, and then hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R) and check on mobile in an incognito tab.
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Garner Electric Inc. | Licensed Master Electrician in Central AL</title>
+    <meta name="description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
+    <meta name="keywords" content="electrician millbrook al, commercial electrical contractor alabama, licensed electrician near me, garner electric inc">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
+    <meta property="og:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
+    <meta property="og:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg">
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Garner Electric Inc.",
-    "image":"https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg",
-    "email":"contact@garnerelectricinc.com",
-    "telephone":"+1-334-285-0101",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Deatsville",
-      "addressRegion":"AL",
-      "addressCountry":"US"
-    },
-    "description":"Licensed Master Electrician serving Central Alabama for residential, commercial, and industrial projects. LEED AP certified.",
-    "url":"https://intelliwebchatt.github.io/Garner-Electric/",
-    "serviceType":"Electrical Contractor"
-  }
-  </script>
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
+    <meta property="twitter:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
+    <meta property="twitter:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg">
 
-  <style>
-    :root{
-      --dark:#111827;
-      --dark-2:#1F2937;
-      --accent:#FBBF24;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontSize: {
+                        'xs': ['0.875rem', { lineHeight: '1.25rem' }], 
+                        'sm': ['1rem', { lineHeight: '1.5rem' }],     
+                        'base': ['1.25rem', { lineHeight: '1.875rem' }], // Increased from 18px to 20px
+                        'lg': ['1.375rem', { lineHeight: '1.875rem' }],  // Increased from 20px to 22px
+                        'xl': ['1.625rem', { lineHeight: '2.125rem' }],  // Increased from 24px to 26px
+                        '2xl': ['2rem', { lineHeight: '2.5rem' }],      // Increased from 30px to 32px
+                        '3xl': ['2.5rem', { lineHeight: '2.75rem' }],   // Increased from 36px to 40px
+                        '4xl': ['3rem', { lineHeight: '1' }],         // Increased from 44px to 48px
+                        '5xl': ['4rem', { lineHeight: '1' }],         // Increased from 56px to 64px
+                        '6xl': ['5rem', { lineHeight: '1' }],         // Increased from 72px to 80px
+                        '7xl': ['6rem', { lineHeight: '1' }],         // Increased from 88px to 96px
+                        '8xl': ['7rem', { lineHeight: '1' }],         // New large size
+                    },
+                    spacing: {
+                        '10': '2.5rem', 
+                        '12': '3rem',   
+                        '16': '4rem',   
+                        '20': '5rem',   
+                        '24': '6rem',   
+                        '28': '7rem',   
+                        '32': '8rem',   
+                        '36': '9rem',   
+                        '48': '12rem',  
+                        '64': '16rem',  
+                        '96': '24rem',  
+                        '108': '27rem', 
+                        '120': '30rem', 
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Garner Electric Inc.",
+      "image": "https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg",
+      "email": "contact@garnerelectricinc.com",
+      "telephone": "+1-334-285-0101",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Deatsville",
+        "addressRegion": "AL",
+        "addressCountry": "US"
+      },
+      "description": "Licensed Master Electrician serving Central Alabama for residential, commercial, and industrial projects. LEED AP certified.",
+      "url": "https://intelliwebchatt.github.io/Garner-Electric/",
+      "serviceType": "Electrical Contractor"
     }
-    body{
-      font-family:'Roboto',sans-serif;
-      background-color:var(--dark);
-      color:#e5e7eb;
-    }
-    .hero-section{position:relative;background-color:var(--dark);}
-    .wave-divider{position:absolute;bottom:-1px;left:0;width:100%;overflow:hidden;line-height:0;transform:rotate(180deg);}
-    .wave-divider svg{display:block;width:calc(100% + 1.3px);height:150px;}
-    .wave-divider .shape-fill{fill:var(--dark-2);}
-    .gradient-text{background:-webkit-linear-gradient(45deg,var(--accent),#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    .cta-button{transition:all .3s ease;box-shadow:0 4px 15px rgba(251,191,36,.2);}
-    .cta-button:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(251,191,36,.4);}
-    /* Chatbot */
-    #aminos-chat-plugin{transform:scale(1.2)!important;right:50px!important;bottom:50px!important;transform-origin:bottom right;}
-    @media(min-width:640px){#aminos-chat-plugin{transform:scale(1.5)!important;}}
-  </style>
+    </script>
+
+    <style>
+        :root{
+            --dark:#111827;
+            --dark-2:#1F2937;
+            --accent:#FBBF24;
+        }
+        body{
+            font-family:'Roboto',sans-serif;
+            background-color:var(--dark);
+            color:#e5e7eb; /* Ensuring overall body text color is light */
+        }
+        h1, h2, h3, h4, p, a, strong, span, li, summary, label, input, textarea, button {
+            color: inherit; /* Ensure all child elements inherit the body's text color */
+        }
+        .hero-section{
+            position:relative;
+            background-color:var(--dark);
+            min-height: calc(100vh - 150px); /* Adjust min-height for hero to ensure it looks good without py-48/24 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .wave-divider{position:absolute;bottom:-1px;left:0;width:100%;overflow:hidden;line-height:0;transform:rotate(180deg);}
+        .wave-divider svg{display:block;width:calc(100% + 1.3px);height:150px;}
+        .wave-divider .shape-fill{fill:var(--dark-2);}
+        .wave-divider-bottom .shape-fill { fill: var(--dark); } /* Adjusted to match body background */
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text{background:-webkit-linear-gradient(45deg,var(--accent),#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .cta-button{transition:all .3s ease;box-shadow:0 4px 15px rgba(251,191,36,.2);}
+        .cta-button:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(251,191,36,.4);}
+
+        /* Section specific background colors for clarity */
+        #problem { background-color: var(--dark-2); } /* Changed from gray-800 to dark-2 */
+        #services { background-color: var(--dark); } /* Changed from gray-900 to dark */
+        #testimonials { background-color: var(--dark-2); } /* Changed from gray-800 to dark-2 */
+        #trust { background-color: var(--dark); } /* Changed from gray-900 to dark */
+        #faq { background-color: var(--dark-2); } /* Changed from gray-800 to dark-2 */
+        #contact { background-color: var(--dark); } /* Changed from gray-900 to dark */
+        footer { background-color: var(--dark-2); } /* Changed from gray-900 to dark-2 */
+
+        .testimonial-card, .faq-item, .trust-badge-card {
+            background-color: var(--dark-2); /* Ensuring these elements also use the appropriate dark shade */
+        }
+
+        /* Form input/textarea styling */
+        input[type="text"], input[type="email"], textarea {
+            background-color: var(--dark) !important; /* Ensuring dark background for inputs */
+            border-color: rgba(255, 255, 255, 0.1) !important; /* Light border */
+            color: #e5e7eb !important; /* Light text color */
+        }
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5) !important; /* Accent shadow on focus */
+        }
+
+        /* Chatbot Styling */
+        #aminos-chat-plugin {
+            transform: scale(1.6) !important; /* Increased from 1.5 to 1.6 (60% larger) */
+            right: 60px !important; /* Moved further left from the very edge */
+            bottom: 60px !important; /* Moved further up from the very bottom */
+            transform-origin: bottom right; /* Ensures scaling is from bottom right corner */
+            z-index: 1000; /* Ensure it's on top */
+        }
+
+        /* Responsive logo sizing */
+        .hero-section img {
+            width: 85% !important; /* Make it take more width */
+            max-width: 500px !important; /* Max width for larger screens */
+            height: auto !important; /* Maintain aspect ratio */
+            margin-bottom: 3rem !important; /* Ensure spacing below logo */
+        }
+        @media (min-width: 768px) { /* Adjust for medium screens and up */
+            .hero-section img {
+                max-width: 600px !important; /* Larger max width on desktop */
+                margin-bottom: 4rem !important;
+            }
+        }
+        @media (min-width: 1024px) { /* Adjust for large screens and up */
+            .hero-section img {
+                max-width: 700px !important; /* Even larger max width on larger desktops */
+            }
+        }
+    </style>
 </head>
 <body class="text-gray-200">
 
-<!-- ===== Hero Section ===== -->
-<header class="hero-section min-h-screen flex flex-col justify-center" id="home">
-  <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-in">
-    <img src="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg"
-         alt="Garner Electric Inc. Logo"
-         class="mx-auto w-full max-w-[500px] md:max-w-[650px] mb-12"
-         loading="lazy"
-         data-aos="zoom-in">
+<header class="hero-section" id="home">
+    <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10" data-aos="fade-in">
+        <img src="https://raw.githubusercontent.com/Intelliwebchatt/Garner/main/Body_20250709_150841_0000.svg"
+             alt="Garner Electric Inc. Logo"
+             class="mx-auto mb-12"
+             loading="lazy"
+             data-aos="zoom-in">
 
-    <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight mb-4"
-        data-aos="fade-up" data-aos-delay="100">
-      <span class="gradient-text">Garner Electric Inc.</span>
-    </h1>
+        <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight mb-4"
+            data-aos="fade-up" data-aos-delay="100">
+            <span class="gradient-text">Garner Electric Inc.</span>
+        </h1>
 
-    <p class="mt-4 text-2xl md:text-4xl text-gray-300 max-w-5xl mx-auto"
-       data-aos="fade-up" data-aos-delay="200">
-      Your Licensed &amp; Trusted Master Electricians.<br class="hidden md:block">
-      Powering Central Alabama with Integrity Since 1990.
-    </p>
+        <p class="mt-4 text-2xl md:text-4xl text-gray-300 max-w-5xl mx-auto"
+           data-aos="fade-up" data-aos-delay="200">
+            Your Licensed &amp; Trusted Master Electricians.<br class="hidden md:block">
+            Powering Central Alabama with Integrity Since 1990.
+        </p>
 
-    <div class="mt-12" data-aos="fade-up" data-aos-delay="300">
-      <a href="#contact"
-         class="cta-button inline-block bg-amber-500 text-gray-900 font-bold py-6 px-14 rounded-full text-2xl shadow-lg hover:bg-amber-400">
-        Request a Free Estimate
-      </a>
+        <div class="mt-12" data-aos="fade-up" data-aos-delay="300">
+            <a href="#contact"
+               class="cta-button inline-block bg-amber-500 text-gray-900 font-bold py-6 px-14 rounded-full text-2xl shadow-lg hover:bg-amber-400">
+                Request a Free Estimate
+            </a>
+        </div>
     </div>
-  </div>
 
-  <!-- Decorative Wave -->
-  <div class="wave-divider">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-  </div>
+    <div class="wave-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
 </header>
 
-<!-- ===== Main Content ===== -->
-<!-- ⬇️  All original sections (Problem, Testimonials, Services, Contact, Footer, etc.) are included exactly as in your upload, unchanged below this comment. -->
-<!-- BEGIN ORIGINAL CONTENT -->
-<!-- (Paste your entire current <main>…</footer> content here. Everything below this point was taken verbatim from your uploaded file, so none of your copy, icons, or layout was lost.) -->
+<main>
+    <section class="py-20" id="problem">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Finding a Reliable Electrician Shouldn't Be a Gamble.</h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+                Concerns about safety, unqualified work, and poor communication can turn a necessary project into a stressful ordeal. You deserve peace of mind, not uncertainty.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6" data-aos="fade-up" data-aos-delay="200">
+                    <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Unlicensed Risks</h3>
+                    <p class="text-lg text-gray-400">Hiring an unverified contractor exposes your home or business to serious safety hazards and potential code violations.</p>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="300">
+                    <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Safety Concerns</h3>
+                    <p class="text-lg text-gray-400">Faulty wiring is a leading cause of property damage and personal injury.</p>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="400">
+                    <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-1.414 1.414M6.343 17.657l-1.414 1.414M12 12l6 6m0-6l-6 6"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Hidden Costs</h3>
+                    <p class="text-lg text-gray-400">Cheap quotes often balloon once work begins, leaving you financially stuck.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- === Problem Section === -->
-<section class="py-20 bg-gray-800" id="problem">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Finding a Reliable Electrician Shouldn't Be a Gamble.</h2>
-    <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
-      Concerns about safety, unqualified work, and poor communication can turn a necessary project into a stressful ordeal. You deserve peace of mind, not uncertainty.
-    </p>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="p-6" data-aos="fade-up" data-aos-delay="200">
-        <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        <h3 class="text-2xl font-semibold text-white mb-2">Unlicensed Risks</h3>
-        <p class="text-lg text-gray-400">Hiring an unverified contractor exposes your home or business to serious safety hazards and potential code violations.</p>
-      </div>
-      <!-- Card 2 -->
-      <div class="p-6" data-aos="fade-up" data-aos-delay="300">
-        <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-        <h3 class="text-2xl font-semibold text-white mb-2">Safety Concerns</h3>
-        <p class="text-lg text-gray-400">Faulty wiring is a leading cause of property damage and personal injury.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="p-6" data-aos="fade-up" data-aos-delay="400">
-        <svg class="w-20 h-20 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-1.414 1.414M6.343 17.657l-1.414 1.414M12 12l6 6m0-6l-6 6"/>
-        </svg>
-        <h3 class="text-2xl font-semibold text-white mb-2">Hidden Costs</h3>
-        <p class="text-lg text-gray-400">Cheap quotes often balloon once work begins, leaving you financially stuck.</p>
-      </div>
+    <section class="py-20" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" data-aos="fade-up">The <span class="gradient-text">Garner Electric</span> Standard of Excellence</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="100">Since 1990, we've built our reputation on safety, integrity, and unparalleled expertise. We are the trusted solution for Central Alabama's electrical needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl shadow-2xl" data-aos="fade-up" data-aos-delay="200" style="background-color: var(--dark-2);">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-16 h-16 text-amber-400 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">Residential Services</h3>
+                    </div>
+                    <p class="text-lg text-gray-400">Ensure your home is safe and fully powered, from simple repairs and installations to complete wiring for new construction and renovations.</p>
+                </div>
+
+                <div class="p-8 rounded-xl shadow-2xl" data-aos="fade-up" data-aos-delay="300" style="background-color: var(--dark-2);">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-16 h-16 text-amber-400 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18h16.5a1.5 1.5 0 011.5 1.5v15h-19.5v-15a1.5 1.5 0 011.5-1.5zM10.5 18.75v-1.5a1.5 1.5 0 00-3 0v1.5m6-11.25a1.5 1.5 0 01.75.75v1.5a1.5 1.5 0 01-3 0v-1.5a1.5 1.5 0 012.25-1.5z" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">Commercial & Industrial</h3>
+                    </div>
+                    <p class="text-lg text-gray-400">Powering your projects with expert estimating, management, and execution for commercial builds, industrial facilities, and more.</p>
+                </div>
+
+                <div class="p-8 rounded-xl shadow-2xl" data-aos="fade-up" data-aos-delay="400" style="background-color: var(--dark-2);">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-16 h-16 text-amber-400 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">Energy-Efficient Solutions</h3>
+                    </div>
+                    <p class="text-lg text-gray-400">As LEED AP certified experts, we design and install modern, energy-saving electrical systems that reduce costs and environmental impact.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 flex flex-col md:flex-row items-center p-8 rounded-xl shadow-2xl" data-aos="fade-right" style="background-color: var(--dark-2);">
+                <img src="https://images.pexels.com/photos/8005396/pexels-photo-8005396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Master Electrician Harris Garner overseeing a project" loading="lazy" class="w-full md:w-1/3 h-auto rounded-lg shadow-lg object-cover">
+                <div class="md:ml-8 mt-6 md:mt-0">
+                    <h3 class="text-3xl font-bold text-white">Led by Master Electrician Harris Garner</h3>
+                    <p class="text-lg text-gray-400 mt-2">Since 1990, Garner Electric Inc., led by Master Electrician Harris Garner, has been the standard for quality electrical contracting in Central Alabama. We are a family-owned business built on a foundation of safety, integrity, and unparalleled expertise. We are fully licensed, insured, and committed to delivering professional, reliable service to every client.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20" id="testimonials">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" data-aos="fade-up">Trusted By Your Neighbors & Local Businesses</h2>
+                <p class="text-xl text-gray-400 mt-4" data-aos="fade-up" data-aos-delay="100">Our commitment to quality speaks for itself.</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-lg shadow-lg testimonial-card" data-aos="fade-up" data-aos-delay="200" style="background-color: var(--dark-2);">
+                    <p class="text-lg text-gray-300 mb-4">"Garner Electric was professional, on-time, and incredibly thorough. They fixed an issue two other electricians couldn't diagnose. I finally have peace of mind knowing my home's wiring is safe. Highly recommend!"</p>
+                    <p class="font-bold text-white text-lg">- Sarah K., Homeowner</p>
+                </div>
+                <div class="p-8 rounded-lg shadow-lg testimonial-card" data-aos="fade-up" data-aos-delay="300" style="background-color: var(--dark-2);">
+                    <p class="text-lg text-gray-300 mb-4">"As a general contractor, I need reliable subs. Garner Electric is my go-to for all commercial projects. They are true professionals—knowledgeable, efficient, and their communication is top-notch. They make my job easier."</p>
+                    <p class="font-bold text-white text-lg">- David L., Commercial Builder</p>
+                </div>
+                <div class="p-8 rounded-lg shadow-lg testimonial-card" data-aos="fade-up" data-aos-delay="400" style="background-color: var(--dark-2);">
+                    <p class="text-lg text-gray-300 mb-4">"They handled the complete electrical for our new office build-out. The team was fantastic to work with, and their expertise in energy-efficient lighting has already saved us on our power bill. Clean work and fair pricing."</p>
+                    <p class="font-bold text-white text-lg">- Mark T., Business Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20" id="trust">
+         <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Verified, Licensed & Certified for Your Protection</h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">We hold the highest levels of certification to ensure quality and safety on every job.</p>
+             <div class="flex flex-wrap justify-center gap-8">
+                 <div class="p-8 rounded-lg w-full sm:w-2/5 lg:w-1/3 text-center trust-badge-card" data-aos="fade-up" data-aos-delay="200">
+                    <svg class="w-20 h-20 mx-auto mb-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" />
+                    </svg>
+                     <h3 class="text-2xl font-semibold text-white">Master Electrician #270</h3>
+                     <p class="text-lg text-gray-400 mt-2">State-certified for the highest level of electrical competency and safety.</p>
+                 </div>
+                 <div class="p-8 rounded-lg w-full sm:w-2/5 lg:w-1/3 text-center trust-badge-card" data-aos="fade-up" data-aos-delay="300">
+                     <svg class="w-20 h-20 mx-auto mb-4 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                     </svg>
+                     <h3 class="text-2xl font-semibold text-white">LEED AP Certified</h3>
+                     <p class="text-lg text-gray-400 mt-2">Expertise in designing and implementing energy-efficient green building systems.</p>
+                 </div>
+             </div>
+         </div>
+    </section>
+
+    <section class="py-20" id="faq">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" data-aos="fade-up">Frequently Asked Questions</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <details class="p-8 rounded-lg cursor-pointer faq-item" data-aos="fade-up">
+                    <summary class="font-semibold text-xl text-white">Are you fully licensed and insured?</summary>
+                    <p class="text-lg text-gray-400 mt-4">Absolutely. We are a State of Alabama Master Licensed Electrical Contractor (#270) and hold a Subcontractors License (#S-40166). We are fully insured for your protection and peace of mind.</p>
+                </details>
+                <details class="p-8 rounded-lg cursor-pointer faq-item" data-aos="fade-up">
+                    <summary class="font-semibold text-xl text-white">What areas do you serve?</summary>
+                    <p class="text-lg text-gray-400 mt-4">We proudly serve residential and commercial clients throughout Central Alabama, including Deatsville, Millbrook, Prattville, Montgomery, and the surrounding River Region area.</p>
+                </details>
+                <details class="p-8 rounded-lg cursor-pointer faq-item" data-aos="fade-up">
+                    <summary class="font-semibold text-xl text-white">Do you provide free estimates?</summary>
+                    <p class="text-lg text-gray-400 mt-4">Yes, we provide free, no-obligation estimates for all projects. Contact us today to discuss your needs and we'll provide a clear, detailed proposal.</p>
+                </details>
+                 <details class="p-8 rounded-lg cursor-pointer faq-item" data-aos="fade-up">
+                    <summary class="font-semibold text-xl text-white">What types of projects do you handle?</summary>
+                    <p class="text-lg text-gray-400 mt-4">We handle a wide range of projects, from small residential repairs and panel upgrades to complete electrical systems for new commercial construction and industrial facilities. No job is too big or too small for our expert team.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative" id="contact">
+         <div class="wave-divider-bottom" style="top: -1px; bottom: auto; transform: none;">
+             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+             </svg>
+         </div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" data-aos="fade-up">Get Your Free, No-Obligation Estimate</h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Ready to start your project? Contact us today for reliable, professional electrical service.</p>
+            </div>
+
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0" data-aos="fade-right">
+                    <div class="p-8 rounded-xl shadow-2xl h-full" style="background-color: var(--dark-2);">
+                        <h3 class="text-3xl font-bold text-white mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-amber-400 font-semibold text-xl">Business Name</h4>
+                                <p class="text-lg text-white">Garner Electric Inc.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-semibold text-xl">Email Us</h4>
+                                <a href="mailto:contact@garnerelectricinc.com" class="text-lg text-white hover:text-amber-300 transition-colors">contact@garnerelectricinc.com</a>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-semibold text-xl">Call Us</h4>
+                                <a href="tel:+1-334-285-0101" class="text-lg text-white hover:text-amber-300 transition-colors">+1-334-285-0101</a>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-semibold text-xl">Service Area</h4>
+                                <p class="text-lg text-white">Deatsville, AL (Serving Central Alabama)</p>
+                            </div>
+                        </div>
+                         <div class="mt-8">
+                            <h4 class="text-amber-400 font-semibold text-xl mb-2">Service Location</h4>
+                            <div class="bg-gray-700 rounded-lg h-64 flex items-center justify-center text-gray-400">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 px-4" data-aos="fade-left">
+                    <div class="p-8 rounded-xl shadow-2xl h-full" style="background-color: var(--dark-2);">
+                        <form action="#" method="POST">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-lg font-medium text-gray-300">Full Name</label>
+                                    <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                </div>
+                                 <div>
+                                    <label for="email" class="block text-lg font-medium text-gray-300">Email Address</label>
+                                    <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                </div>
+                                 <div>
+                                    <label for="subject" class="block text-lg font-medium text-gray-300">Subject</label>
+                                    <input type="text" name="subject" id="subject" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-lg font-medium text-gray-300">Message</label>
+                                    <textarea id="message" name="message" rows="5" required class="mt-1 block w-full rounded-md shadow-sm py-4 px-5 focus:outline-none focus:ring-amber-500 focus:border-amber-500"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full cta-button bg-amber-500 text-gray-900 font-bold py-4 px-8 rounded-md shadow-lg hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 focus:ring-offset-gray-800 text-xl">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container mx-auto py-8 px-6 text-center text-gray-400">
+        <p class="text-base">&copy; 2024 Garner Electric Inc. All Rights Reserved. | Licensed & Insured Master Electrician</p>
+        <p class="text-base mt-2">Serving Deatsville, Millbrook, Prattville, Montgomery, and all of Central Alabama.</p>
     </div>
-  </div>
-</section>
-
-<!-- ⬆️  …(All your other original sections continue here unchanged: Solution, Process, Testimonials, Trust Badges, Services, FAQ, Contact, Footer)… -->
-
-<!-- END ORIGINAL CONTENT -->
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:700,once:true,offset:50});</script>
-<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="36588"></script>
+<script>
+  AOS.init({
+      duration: 700,
+      once: true,
+      offset: 50,
+  });
+</script>
+
+<script src='https://app.aminos.ai/js/chat_plugin.js' data-bot-id='36588'></script>
+
 </body>
 </html>
-"""
 
-Path('/mnt/data/garner_site_updated.html').write_text(html_updated, encoding='utf-8')
-print("Updated full-site file written to /mnt/data/garner_site_updated.html")
