@@ -1,11 +1,3 @@
-Ah, thank you for that critical clarification. That is a very important detail.
-If the file you uploaded to GitHub is actually named file_00000000fdb862308ce124f896abc32a.png, then you are correct, the previous code will not work because the filename in the code must exactly match the name of the uploaded file.
-You have two options to fix this:
-Option 1 (Recommended): Rename the File
-The best practice is to keep filenames simple. If you can, go into your GitHub repository, delete the image with the long name, rename the file on your computer to logo.png, and then upload the newly named file. If you do this, the code I gave you before is perfect.
-Option 2 (Quick Fix): Update the Code to Match the Long Filename
-If you prefer to keep the long filename you've already uploaded, then you must update the HTML code to match it.
-Here is the corrected code that uses your long filename. Replace the code in your index.html file with this block.
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
@@ -37,9 +29,9 @@ Here is the corrected code that uses your long filename. Replace the code in you
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Electrician",
+      "@type": "LocalBusiness",
       "name": "Garner Electric Inc.",
-      "logo": "file_00000000fdb862308ce124f896abc32a.png",
+      "image": "file_00000000fdb862308ce124f896abc32a.png",
       "email": "contact@garnerelectricinc.com",
       "telephone": "+1-334-285-0101",
       "address": {
@@ -49,7 +41,8 @@ Here is the corrected code that uses your long filename. Replace the code in you
         "addressCountry": "US"
       },
       "description": "Licensed Master Electrician serving Central Alabama for residential, commercial, and industrial projects. LEED AP certified.",
-      "url": "https://intelliwebchatt.github.io/Garner-Electric/" 
+      "url": "https://intelliwebchatt.github.io/Garner-Electric/",
+      "serviceType": "Electrical Contractor"
     }
     </script>
     
@@ -116,13 +109,17 @@ Here is the corrected code that uses your long filename. Replace the code in you
 <body class="text-gray-200">
 
     <header class="hero-section" id="home">
-        <div class="container mx-auto px-6 py-20 md:py-28 text-center" data-aos="fade-in">
-            <img src="file_00000000fdb862308ce124f896abc32a.png" alt="Garner Electric Inc. Logo" class="h-28 md:h-32 w-auto mx-auto mb-8" data-aos="zoom-in">
+        <div class="container mx-auto px-6 py-24 md:py-36 text-center relative z-10" data-aos="fade-in">
+            <img src="file_00000000fdb862308ce124f896abc32a.png" alt="Garner Electric Inc. Company Logo" class="h-36 md:h-48 w-auto mx-auto mb-10" loading="lazy" data-aos="zoom-in">
             
-            <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">Garner Electric Inc.</h1>
-            <p class="mt-4 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Your Licensed & Trusted Master Electricians. <br class="hidden md:block">Powering Central Alabama with Integrity Since 1990.</p>
-            <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
-                <a href="#contact" class="cta-button inline-block bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-amber-400">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
+                <span class="gradient-text">Garner Electric Inc.</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-3xl text-gray-300 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Your Licensed & Trusted Master Electricians. <br class="hidden md:block">Powering Central Alabama with Integrity Since 1990.
+            </p>
+            <div class="mt-10" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="cta-button inline-block bg-amber-500 text-gray-900 font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-amber-400">
                     Request a Free Estimate
                 </a>
             </div>
@@ -317,8 +314,7 @@ Here is the corrected code that uses your long filename. Replace the code in you
                              <div class="mt-8">
                                 <h4 class="text-amber-400 font-semibold mb-2">Service Location</h4>
                                 <div class="bg-gray-700 rounded-lg h-64 flex items-center justify-center text-gray-400">
-                                    Map Placeholder
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -377,4 +373,3 @@ Here is the corrected code that uses your long filename. Replace the code in you
 
 </body>
 </html>
-
