@@ -1,3 +1,11 @@
+Ah, thank you for that critical clarification. That is a very important detail.
+If the file you uploaded to GitHub is actually named file_00000000fdb862308ce124f896abc32a.png, then you are correct, the previous code will not work because the filename in the code must exactly match the name of the uploaded file.
+You have two options to fix this:
+Option 1 (Recommended): Rename the File
+The best practice is to keep filenames simple. If you can, go into your GitHub repository, delete the image with the long name, rename the file on your computer to logo.png, and then upload the newly named file. If you do this, the code I gave you before is perfect.
+Option 2 (Quick Fix): Update the Code to Match the Long Filename
+If you prefer to keep the long filename you've already uploaded, then you must update the HTML code to match it.
+Here is the corrected code that uses your long filename. Replace the code in your index.html file with this block.
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
@@ -9,12 +17,18 @@
     <meta name="keywords" content="electrician millbrook al, commercial electrical contractor alabama, licensed electrician near me, garner electric inc">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.garnerelectricinc.com/"> <meta property="og:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
+    <meta property="og:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
+    <meta property="og:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
     <meta property="og:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
-    <meta property="og:image" content="https://i.imgur.com/8Jd9VNu.png"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.garnerelectricinc.com/"> <meta property="twitter:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
+    <meta property="og:image" content="file_00000000fdb862308ce124f896abc32a.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://intelliwebchatt.github.io/Garner-Electric/">
+    <meta property="twitter:title" content="Garner Electric Inc. | Licensed Master Electrician in Central AL">
     <meta property="twitter:description" content="Trusted residential and commercial electrical services in Central Alabama. Over 27 years of experience. Licensed, insured, and LEED AP certified. Get a free estimate!">
-    <meta property="twitter:image" content="https://i.imgur.com/8Jd9VNu.png"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="twitter:image" content="file_00000000fdb862308ce124f896abc32a.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "Electrician",
       "name": "Garner Electric Inc.",
-      "logo": "https://i.imgur.com/8Jd9VNu.png",
+      "logo": "file_00000000fdb862308ce124f896abc32a.png",
       "email": "contact@garnerelectricinc.com",
       "telephone": "+1-334-285-0101",
       "address": {
@@ -35,14 +49,14 @@
         "addressCountry": "US"
       },
       "description": "Licensed Master Electrician serving Central Alabama for residential, commercial, and industrial projects. LEED AP certified.",
-      "url": "https://www.garnerelectricinc.com/" 
+      "url": "https://intelliwebchatt.github.io/Garner-Electric/" 
     }
     </script>
     
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #111827; /* Dark gray background */
+            background-color: #111827;
         }
         .hero-section {
             background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.pexels.com/photos/209224/pexels-photo-209224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
@@ -64,10 +78,10 @@
             height: 150px;
         }
         .wave-divider .shape-fill {
-            fill: #1F2937; /* Wave color to match next section */
+            fill: #1F2937;
         }
         .wave-divider-bottom .shape-fill {
-            fill: #111827; /* Wave color to match footer */
+            fill: #111827;
         }
         h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
@@ -103,7 +117,7 @@
 
     <header class="hero-section" id="home">
         <div class="container mx-auto px-6 py-20 md:py-28 text-center" data-aos="fade-in">
-            <img src="https://i.imgur.com/8Jd9VNu.png" alt="Garner Electric Inc. Logo" class="h-28 md:h-32 w-auto mx-auto mb-8" data-aos="zoom-in">
+            <img src="file_00000000fdb862308ce124f896abc32a.png" alt="Garner Electric Inc. Logo" class="h-28 md:h-32 w-auto mx-auto mb-8" data-aos="zoom-in">
             
             <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">Garner Electric Inc.</h1>
             <p class="mt-4 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Your Licensed & Trusted Master Electricians. <br class="hidden md:block">Powering Central Alabama with Integrity Since 1990.</p>
@@ -363,3 +377,4 @@
 
 </body>
 </html>
+
