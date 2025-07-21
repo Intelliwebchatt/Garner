@@ -1,14 +1,3 @@
-You are absolutely right! Thank you for providing the full HTML. I see the issue now, and it's a critical one that explains why your changes weren't taking effect.
-You have this line in your provided Html_updated in the <head> section:
-<script>
-    /* All previous font‑size / spacing overrides removed to restore Tailwind defaults. */
-    tailwind.config = { theme:{ extend:{} } };
-</script>
-
-This line completely undoes all the Tailwind CSS font size and spacing customizations that I implemented in the previous steps. It resets Tailwind back to its default, smaller sizes, which is why you continued to see the site "smaller than normal."
-My apologies, I missed that crucial line when you sent the full HTML block. It seems like a previous iteration was sent that had this reset included.
-I will now remove this problematic line and return the complete, correct HTML file. I will also make some minor adjustments to your custom CSS to ensure all elements explicitly inherit the body's text color, which you've defined, to prevent any text from being unreadable if its default color was too dark.
-Here is the corrected and finalized HTML file. Please use this exact file, replace your index.html on GitHub, and then hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R) and check on mobile in an incognito tab.
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
